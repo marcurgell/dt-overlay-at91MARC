@@ -13,30 +13,6 @@
 #include "sama5d2-pinfunc.h"
 #include "dt-bindings/pinctrl/at91.h"
 
-&i2c1 {
-	#address-cells = <1>;
-	#size-cells = <0>;
-
-	qt1070: keyboard@1b {
-		compatible = "qt1070";
-		reg = <0x1b>;
-		interrupt-parent = <&pioA>;
-		interrupts = <PIN_PC25 0>;
-		pinctrl-names = "default";
-		pinctrl-0 = <&pinctrl_qt1070_irq>;
-		wakeup-source;
-	};
-
-	atmel_mxt_ts@4a {
-		compatible = "atmel,atmel_mxt_ts";
-		reg = <0x4a>;
-		interrupt-parent = <&pioA>;
-		interrupts = <PIN_PD1 0x0>;
-		pinctrl-names = "default";
-		pinctrl-0 = <&pinctrl_mxt_irq>;
-	};
-};
-
 &hlcdc {
 	status = "okay";
 
