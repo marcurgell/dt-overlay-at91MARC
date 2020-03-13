@@ -17,11 +17,12 @@
 &hlcdc {
 	status = "okay";
 
-	memory-region = <&display_reserved>;
+	
 
 	hlcdc-display-controller {
 		pinctrl-names = "default";
 		pinctrl-0 = <&pinctrl_lcd_base &pinctrl_lcd_rgb>;
+		memory-region = <&display_reserved>;
 		port@0 {
 			#address-cells = <1>;
 			#size-cells = <0>;
